@@ -10,8 +10,11 @@ export async function GET(
   }
   const _emojis = await res.json();
 
+  const emojis = Object.keys(_emojis);
+  const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
   return NextResponse.json({
-    name: params.emoji,
-    url: _emojis[params.emoji],
+    name: randomEmoji,
+    url: _emojis[randomEmoji],
   });
 }
