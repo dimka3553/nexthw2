@@ -12,7 +12,7 @@ export default function RootLayout({
         <nav className="h-16 flex items-center justify-center gap-5 text-primary border-b-1 border-slate-200">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Link href="/emojis">Emojis</Link>
+          <Link href="/countries">Countries</Link>
         </nav>
         <div className="flex justify-center text-center">{children}</div>
       </body>
