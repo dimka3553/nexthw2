@@ -20,7 +20,7 @@ export default function CountryLayout({
   }, []);
 
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
       {children}
       <div>
         <p className="font-bold">Real time BTC price</p>${btcPrice}
