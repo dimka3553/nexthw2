@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "All Countries - Random Country Generator",
+  title: "All Countries",
   description: "Lists all countires",
 };
 
@@ -17,7 +17,9 @@ type Country = {
 };
 
 const fetchCountries = async (): Promise<Country[]> => {
-  const res = await fetch("https://restcountries.com/v3.1/all");
+  const res = await fetch("https://restcountries.com/v3.1/all", {
+    cache: "no-cache",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

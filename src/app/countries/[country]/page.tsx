@@ -9,6 +9,15 @@ type Country = {
   region: string;
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { country: string };
+}) {
+  // replace %20 with space
+  params.country = params.country.replace(/%20/g, " ");
+  return { title: params.country, description: "Country page" };
+}
 const getCountry = async (name: string): Promise<Country> => {
   const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
   if (!res.ok) {
@@ -52,7 +61,7 @@ export default async function CountryPage({
             <strong>Population:</strong> {country.population.toLocaleString()}
           </p>
           <p>
-            <strong>Capital(s):</strong> {country.capital.join(", ")}
+            <strong>Capital(s):</strong> {country.capital?.join(", ")}
           </p>
           <p>
             <strong>Region:</strong> {country.region}
