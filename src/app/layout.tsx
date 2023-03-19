@@ -11,7 +11,9 @@ export default function RootLayout({
       <body className="bg-[#f4f6f9]">
         <nav className="h-16  text-primary">
           <div className="max-w-[1200px] px-5 items-center flex  gap-5 justify-between h-full mx-auto">
-            <div className="font-bold text-lg">IMDB</div>
+            <div className="font-bold text-lg">
+              <Link href="/">IMDB</Link>
+            </div>
             <div>Top 250</div>
           </div>
         </nav>
