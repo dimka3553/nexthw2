@@ -1,3 +1,4 @@
+import FavoritesBtn from "@/components/FavoritesBtn";
 import { MovieType } from "@/types/movie";
 import Image from "next/image";
 
@@ -50,7 +51,8 @@ export default async function MoviePage({
               </div>
             ))}
           </div>
-          <p>{movie.desc}</p>
+          <h2 className="font-bold text-lg">Summary</h2>
+          <p>{movie.desc.replace(/&apos;/g, "'")}</p>
           <h2 className="font-bold text-lg">Actors</h2>
           <div className="flex gap-5">
             {movie.actors.map((actor, i) => (
@@ -59,6 +61,7 @@ export default async function MoviePage({
               </div>
             ))}
           </div>
+          <FavoritesBtn movie={movie} />
         </div>
       </div>
     </main>
