@@ -28,11 +28,11 @@ export default async function Home() {
   return (
     <main className="grid grid-cols-1 min-[800px]:grid-cols-3 min-[400px]:grid-cols-2 gap-5 px-5 w-full min-[1000px]:grid-cols-4 mx-auto max-w-[1200px]">
       {movies.map((movie, i) => (
-        <Link href={`movie/${movie.imdb_url.replace(/\/title\//g, "")}`}>
-          <div
-            key={i}
-            className="bg-white hover:scale-110 transition-[0.2s] max-h-[150px] overflow-hidden relative hover:z-10 rounded-md active:scale-95 cursor-pointer"
-          >
+        <Link
+          href={`movie/${movie.imdb_url.replace(/\/title\//g, "")}`}
+          key={i}
+        >
+          <div className="bg-white hover:scale-110 transition-[0.2s] max-h-[150px] overflow-hidden relative hover:z-10 rounded-md active:scale-95 cursor-pointer">
             <Image
               src={movie.image_url}
               width={300}
