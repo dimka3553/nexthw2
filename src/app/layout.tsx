@@ -8,13 +8,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col gap-5">
-        <nav className="h-16 flex items-center justify-center gap-5 text-primary border-b-1 border-slate-200">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/emojis">Emojis</Link>
+      <body className="bg-[#f4f6f9]">
+        <nav className="h-16  text-primary">
+          <div className="max-w-[1200px] px-5 items-center flex  gap-5 justify-between h-full mx-auto">
+            <div className="font-bold text-lg">IMDB</div>
+            <div>Top 250</div>
+          </div>
         </nav>
-        <div className="flex justify-center text-center">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );
