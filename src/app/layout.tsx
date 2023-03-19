@@ -14,7 +14,7 @@ export default function RootLayout({
             <div className="font-bold text-lg">
               <Link href="/">IMDB</Link>
             </div>
-            <div>Top 250</div>
+            <Link href="/favorites">Favorites</Link>
           </div>
         </nav>
         <div>{children}</div>
