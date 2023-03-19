@@ -26,7 +26,6 @@ export default async function MoviePage({
   params: { id: string };
 }) {
   const movie = await fetchMovie(params.id);
-  console.log(movie.name);
   return (
     <main className="max-w-[1200px] mx-auto px-5">
       <div className="flex gap-10 max-[800px]:flex-col ">

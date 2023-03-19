@@ -20,7 +20,7 @@ export default function FavoritesPage() {
   return (
     <main className="grid grid-cols-1 min-[800px]:grid-cols-3 min-[400px]:grid-cols-2 gap-5 px-5 w-full min-[1000px]:grid-cols-4 mx-auto max-w-[1200px]">
       {movies.map((movie, i) => (
-        <MovieCard movie={movie} i={i} />
+        <MovieCard movie={movie} key={i} />
       ))}
     </main>
   );
