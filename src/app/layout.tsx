@@ -17,7 +17,7 @@ export default function RootLayout({
             <Link href="/favorites">Favorites</Link>
           </div>
         </nav>
-        <div>{children}</div>
+        <div className="pb-5">{children}</div>
       </body>
     </html>
   );

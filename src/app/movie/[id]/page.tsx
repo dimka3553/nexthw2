@@ -29,12 +29,13 @@ export default async function MoviePage({
   console.log(movie.name);
   return (
     <main className="max-w-[1200px] mx-auto px-5">
-      <div className="flex gap-10">
+      <div className="flex gap-10 max-[800px]:flex-col ">
         <Image
           src={movie.image_url}
           width={500}
           height={500}
           alt={movie.name}
+          className="max-[800px]:h-[300px] max-[800px]:w-full object-cover"
         />
 
         <div className="flex flex-col gap-5">
