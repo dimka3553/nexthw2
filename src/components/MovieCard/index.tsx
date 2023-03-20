@@ -9,7 +9,7 @@ interface MovieCardProps {
 export default function MovieCard({ movie }: MovieCardProps) {
   return (
     <Link href={`movie/${movie.imdb_url.replace(/\/title\//g, "")}`}>
-      <div className="bg-white hover:scale-110 transition-[0.2s] max-h-[150px] overflow-hidden relative hover:z-10 rounded-md active:scale-95 cursor-pointer">
+      <div className="bg-white hover:scale-110 transition-[0.2s] max-h-[150px] overflow-hidden relative hover:z-[12] rounded-md active:scale-95 cursor-pointer">
         <Image
           src={movie.image_url}
           width={300}
