@@ -28,7 +28,7 @@ export default async function MoviePage({
   const movie = await fetchMovie(params.id);
   return (
     <main className="max-w-[1200px] mx-auto px-5">
-      <div className="flex gap-10 max-[800px]:flex-col ">
+      <div className="flex gap-10 max-[800px]:flex-col">
         <Image
           src={movie.image_url}
           width={500}
